@@ -49,7 +49,7 @@ public class OneD_Arr {
     public int binarySearchMax() {
         int low = 0;
         int high = N - 1;
-        int max = A[N - 1]; // Default maximum
+        int max = A[N - 1]; 
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
@@ -71,14 +71,14 @@ public class OneD_Arr {
         while (low <= high) {
             int mid = low + (high - low) / 2;
             if (A[mid] == x) {
-                return true; // Element found
+                return true; 
             } else if (A[mid] < x) {
                 low = mid + 1;
             } else {
                 high = mid - 1;
             }
         }
-        return false; // Element not found
+        return false; 
     }
 
     public void deleteNumber(int x) {
@@ -94,25 +94,21 @@ public class OneD_Arr {
         }
     }
 
-    public void orderArray(String order) {
-        if (order.equalsIgnoreCase("asc")) {
-            // Using bubble sort for ascending order
+    public void orderArray(String order) { //bubble sort
+        if (order.equalsIgnoreCase("asc")) {         
             for (int i = 0; i < N - 1; i++) {
                 for (int j = 0; j < N - i - 1; j++) {
-                    if (A[j] > A[j + 1]) {
-                        // Swap A[j] and A[j+1]
+                    if (A[j] > A[j + 1]) {                      
                         int temp = A[j];
                         A[j] = A[j + 1];
                         A[j + 1] = temp;
                     }
                 }
             }
-        } else if (order.equalsIgnoreCase("dsc")) {
-            // Using bubble sort for descending order
+        } else if (order.equalsIgnoreCase("dsc")) {           
             for (int i = 0; i < N - 1; i++) {
                 for (int j = 0; j < N - i - 1; j++) {
-                    if (A[j] < A[j + 1]) {
-                        // Swap A[j] and A[j+1]
+                    if (A[j] < A[j + 1]) {                      
                         int temp = A[j];
                         A[j] = A[j + 1];
                         A[j + 1] = temp;

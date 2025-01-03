@@ -4,9 +4,7 @@ import java.util.Scanner;
 public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to Array Operations Menu!");
-        
-        // Creating an instance of the OneD_Arr class
+        System.out.println("Welcome to Array Operations Menu!");      
         OneD_Arr array = null;
 
         boolean exit = false;
